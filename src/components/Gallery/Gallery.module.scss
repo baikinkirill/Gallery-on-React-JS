@@ -1,0 +1,35 @@
+.parent{
+  display: flex;
+  min-height: 300px;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  & *:nth-child(n){
+    transition: opacity 100ms;
+  }
+  & img:nth-child(n){
+    object-fit: cover;
+    width: 70vw;
+    max-width: 500px;
+    max-height: 300px;
+    height: 40vw;
+    border-radius: 15px;
+
+    @media(max-width: 1000px) {
+      width: 70vw;
+      height: 40vw;
+
+    }
+  }
+
+  div{
+    position: absolute;
+    //opacity: 0;
+  }
+}
+
+.anim{
+  & *:nth-child(n){
+    transition: all 250ms;
+  }
+}
